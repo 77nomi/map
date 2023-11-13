@@ -1,0 +1,44 @@
+<map
+  longitude="{{longitude}}" 
+  latitude="{{latitude}}"
+  markers="{{markers}}"
+  polyline="{{polyline}}"
+  scale="{{scale}}"
+  id = "myMap"
+  show-location = "true"
+>
+<cover-view class="coverview" bindtap="controltap">
+    <cover-image class="station" src="/icons/position.jpg"></cover-image>
+  </cover-view>
+</map>
+
+<view class="container">
+  <view class="partition">
+    <view class="black">
+      <view class="white"></view>
+    </view>
+  </view>
+  <view class="tabLine">
+    <image bindtap="clean" class="clean" src="/icons/clean.png" mode=""/>
+    <scroll-view enable-flex="true" class="tabs" scroll-x="true">
+      <view 
+        wx:for="{{tabs}}" 
+        wx:key="index"
+        class="tabItems {{item.isActive?'active':''}}" 
+        bindtap="tabsChange"
+        data-index="{{item.id}}"
+      >
+        {{item.name}}
+      </view>
+    </scroll-view>
+  </view>
+  <scroll-view class="main" scroll-y="true">
+    <view wx:for="{{markers}}" wx:key="index" class="detailBox" bind:tap="changepoint" data-longitude="{{item.longitude}}" data-latitude="{{item.latitude}}">
+      <image class="icon" src="{{item.iconPath}}" mode=""/>
+      <view class="content">
+        {{item.callout.content}}
+      </view>
+      <image catch:tap="goto" data-id="{{item.id}}"  class="goto" src="/icons/goto.png" mode=""/>
+    </view>
+  </scroll-view>
+</view>

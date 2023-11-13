@@ -1,0 +1,113 @@
+map{
+  position: -webkit-sticky;
+  position: sticky;
+  top: -40vh;
+  height: 70vh;
+  width: 100%;
+}
+.coverview{
+  position: absolute;
+  width: 75rpx;
+  height: 75rpx;
+  bottom: 50rpx;
+  right: 50rpx;
+}
+.station{
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 50%;
+}
+
+.container{
+  position: relative;
+}
+
+.partition{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 30vh;
+  height: 20rpx;
+  background-color: rgb(151, 151, 151);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.black{
+  height: 15rpx;
+  width: 100rpx;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.white{
+  height: 4rpx;
+  width: 70rpx;
+  background-color: white;
+}
+
+.tabLine{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 31vh;
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.clean{
+  margin: 0 10rpx 0 20rpx;
+  padding-right: 20rpx;
+  height: 45rpx;
+  width: 45rpx;
+  border-right: solid black 1rpx;
+}
+.tabs{
+  width: 86%;
+  height: 80rpx;
+  position: relative;
+  display: flex;
+  white-space: nowrap;
+}
+.tabItems{
+  color: rgb(73, 73, 73);
+  margin: 10rpx 0;
+  padding: 0 10rpx ;
+  height: 60rpx;
+  font-size: 35rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+.active{
+  border-bottom: solid rgb(51, 85, 148) 7rpx;
+  color: rgb(51, 85, 148);
+  font-weight: 600;
+}
+
+.main{
+  height: 63vh;
+}
+
+.detailBox{
+  height: 130rpx;
+  width: 100%;
+  background-color: rgb(241, 241, 241);
+  margin-bottom: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.icon{
+  height: 80rpx;
+  width: 80rpx;
+}
+.content{
+  width: 300rpx;
+  font-weight: 600;
+  font-size: 40rpx;
+  text-align: center;
+}
+.goto{
+  height: 60rpx;
+  width: 60rpx;
+}

@@ -1,0 +1,35 @@
+<view class="title">
+  <view class="textBox">
+    <view class="smallTitle">起点：</view>
+    <view class="textOut">{{markers[0].callout.content}}</view>
+  </view>
+  <view class="textBox">
+    <view class="smallTitle">终点：</view>
+    <view class="textOut">{{markers[1].callout.content}}</view>
+  </view>
+</view>
+
+<view class="tabLine">
+  <view class="tabs">
+    <view 
+      wx:for="{{tabs}}" 
+      wx:key="index"
+      class="tabItems {{item.isActive?'active':''}}" 
+      bindtap="tabsChange"
+      data-index="{{item.id}}"
+    >
+      {{item.name}}
+    </view>
+  </view>
+</view>
+
+<map
+  longitude="{{longitude}}" 
+  latitude="{{latitude}}"
+  markers="{{markers}}"
+  polyline="{{polyline}}"
+  scale="{{scale}}"
+  id = "myMap"
+  show-location = "true"
+>
+</map>
